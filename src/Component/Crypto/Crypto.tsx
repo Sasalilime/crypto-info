@@ -10,7 +10,9 @@ const Crypto = () => {
 
     const fetchCrypto = async (api: string) => {
         try {
-            const response = await fetch(api);
+            const response = await fetch(api, {
+                mode: 'no-cors'
+            });
 
             data = await response.json();
             setResult(data);
