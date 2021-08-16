@@ -1,0 +1,27 @@
+.header {
+    height: 6rem;
+    background-color: #DBEAFE;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo {
+    height: 68px;
+    flex: 1;
+}
+
+.title {
+    flex-basis: 60%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    background-color: #BFDBFE;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
