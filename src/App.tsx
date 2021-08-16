@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+ function App() {
+
+     const [result, setResult] = useState<[]>();
+     let data = [];
+
+const  fetchCrypto = async () => {
+    try {
+        const response = await fetch(`https://api.nomics.com/v1/currencies?key=bf98d6b1cc552f8bbe69c2204f9a3652&ids=ethereum&convert=EUR&attributes=id,name,logo_url,description,reddit_url`);
+
+        data = await response.json();
+
+        setResult(data);
+
+      //  console.log(result[0])
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+useEffect(()=> {
+    fetchCrypto();
+}, [])
+
+
+    return (
+        <div className="App">
+            <header className="App-header">
+
+            </header>
+        </div>
+    );
 }
 
 export default App;
