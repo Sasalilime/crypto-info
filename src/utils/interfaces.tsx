@@ -6,3 +6,11 @@ export type CryptoType = {
     reddit_url: string;
     price: string
 }
+
+export type Currency = {
+    id: "",
+    currency: "",
+    symbol: "",
+    name: "",
+    price: ""
+}

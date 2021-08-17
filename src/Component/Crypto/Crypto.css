@@ -1,7 +1,25 @@
 .cryptoLogo {
     height: 8rem;
 }
+
 .cryptoName {
     font-family: 'Nunito', sans-serif;
     font-size: 1.5rem;
+}
+
+.description {
+    max-height: 5rem;
+    overflow: hidden;
+}
+
+.link{
+    margin-top:auto;
+}
+
+@media (min-width: 768px) {
+
+    .description {
+        overflow: visible;
+    }
+
 }
