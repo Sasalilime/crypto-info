@@ -8,12 +8,53 @@
 }
 
 .description {
-    max-height: 5rem;
     overflow: hidden;
+    flex-basis: 8rem;
 }
 
-.link{
-    margin-top:auto;
+.modal-content {
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-start;
+}
+
+.description-content {
+    margin: 3rem 1rem;
+}
+
+.close {
+    display: none;
+    margin-right:1rem;
+    cursor: pointer;
+}
+.overlay {
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.81); /* Black background with opacity */
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    background-color: #b1c1ee;
+    border-radius: 5px;
+    width: 5rem;
+    height: 1.5rem;
+}
+
+.link {
+    margin-top: auto;
 }
 
 @media (min-width: 768px) {
@@ -21,5 +62,6 @@
     .description {
         overflow: visible;
     }
+
 
 }
