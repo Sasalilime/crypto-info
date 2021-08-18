@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import './utils.css';
 import Crypto from "./Component/Crypto/Crypto";
 import Header from "./Component/Header/Header";
 

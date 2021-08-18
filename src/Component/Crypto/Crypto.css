@@ -2,6 +2,21 @@
     height: 8rem;
 }
 
+.price {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis:50%;
+}
+
+.evolution {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis:50%;
+}
+
 .cryptoName {
     font-family: 'Nunito', sans-serif;
     font-size: 1.5rem;
@@ -14,24 +29,34 @@
 
 .modal-content {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: flex-start;
 }
 
 .description-content {
-    margin: 3rem 1rem;
+    margin: 1rem 0.5rem;
 }
 
 .close {
     display: none;
-    margin-right:1rem;
+    margin-right: 1rem;
     cursor: pointer;
 }
+
 .overlay {
+    position: absolute;
+    overflow: scroll;
+    font-size: 0.9rem;
+    border: 2px solid #b1c1ee;
+    top: 10rem;
+    right: 1rem;
+    bottom: 5rem;
+    left: 1rem;
     border-radius: 6px;
     display: flex;
+    justify-content: flex-end;
     align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.81); /* Black background with opacity */
+    background-color: ghostwhite; /* Black background with opacity */
     z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
@@ -41,7 +66,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
 }
 
 .btn {
@@ -54,7 +78,7 @@
 }
 
 .link {
-    margin-top: auto;
+    margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -63,5 +87,21 @@
         overflow: visible;
     }
 
+    .overlay {
+        overflow: visible;
+        bottom: 15rem;
+        align-items: center;
+
+    }
+
+    .btn-container {
+        display: none;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 }

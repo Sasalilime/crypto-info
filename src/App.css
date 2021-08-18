@@ -11,9 +11,10 @@ a {
 
 
 
+
 .container {
     width: 80vw;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 1rem;
     border: 2px solid #b1c1ee;
     border-radius: 10px;
@@ -26,6 +27,7 @@ a {
 
     .container {
         width: 90vw;
+        margin: 0.5rem auto;
     }
 
 }

@@ -7,10 +7,19 @@ export type CryptoType = {
     price: string
 }
 
-export type Currency = {
-    id: "",
-    currency: "",
-    symbol: "",
-    name: "",
-    price: ""
+export interface Currency {
+    id: "";
+    currency: "";
+    symbol: "";
+    name: "";
+    price: "";
+    '1d': {
+        price_change_pct: "";
+    },
+    '30d': {
+        price_change_pct: "";
+    },
+    '365d': {
+        price_change_pct: "";
+    }
 }

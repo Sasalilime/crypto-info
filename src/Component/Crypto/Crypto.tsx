@@ -59,7 +59,7 @@ const Crypto = () => {
     useEffect(() => {
         fetchCryptoIntro(`https://api.nomics.com/v1/currencies?key=bf98d6b1cc552f8bbe69c2204f9a3652&ids=ETH&interval=1d,7d,365d&attributes=id,name,logo_url,description,reddit_url&convert=EUR`);
         fetchCryptoInfo('https://api.nomics.com/v1/currencies/ticker?key=bf98d6b1cc552f8bbe69c2204f9a3652&ids=ETH&interval=1d,30d,365d&convert=EUR')
-        console.log(result?.[0])
+        //console.log(result?.[0])
     }, [])
 
     return (
@@ -67,15 +67,32 @@ const Crypto = () => {
             <div className="container">
                 <p className="cryptoName">{result?.[0].name}</p>
                 <img src={result?.[0].logo_url} alt="" className="cryptoLogo"/>
-                <div ref={descriptionEl} className="description"><p
-                    className="modal-content description-content">{result?.[0].description}</p>
+                <div className="stats">
+                    <div className="price">
+                        <span
+                        className="font-bold">Price :</span>{Number(result1?.[0].price).toFixed(2)}€</div>
+                    <div className="evolution">
+                        <p className="font-bold ">Evolution :</p>
+                        <p>1 jour
+                            : <span>{(Number(result1?.[0]["1d"].price_change_pct) * 100).toFixed(2)}%</span> {Number(result1?.[0]["1d"].price_change_pct) > 0 ?
+                                <span className="green">&#x279A;</span> : <span className="red">&#x2798;</span>} </p>
+                        <p>30 jours
+                            :<span>{(Number(result1?.[0]["30d"].price_change_pct) * 100).toFixed(2)}%</span> {Number(result1?.[0]["30d"].price_change_pct) > 0 ?
+                                <span className="green">&#x279A;</span> : <span className="red">&#x2798;</span>} </p>
+                        <p>1 an
+                            : <span>{(Number(result1?.[0]["365d"].price_change_pct) * 100).toFixed(2)}%</span> {Number(result1?.[0]["365d"].price_change_pct) > 0 ?
+                                <span className="green">&#x279A;</span> : <span className="red">&#x2798;</span>} </p>
+                    </div>
+                </div>
+
+                <div ref={descriptionEl} className="description">
+                    <p className="modal-content description-content">{result?.[0].description}</p>
                     <p ref={closeEL} className="modal-content close" onClick={closeModal}>X</p>
                 </div>
 
                 <div className="btn-container">
                     <button onClick={toggleText} className="btn">Voir plus</button>
                 </div>
-                <p className="price">Price: {result1?.[0].price}</p>
                 <a href="https://nomics.com" className="link">Crypto Market Cap & Pricing Data Provided By
                     Nomics</a>
             </div>
