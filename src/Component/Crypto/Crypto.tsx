@@ -12,11 +12,16 @@ const Crypto = () => {
 
     const descriptionEl = useRef<HTMLParagraphElement>(null);
     const closeEL = useRef<HTMLParagraphElement>(null);
+    const btnEl = useRef<HTMLButtonElement>(null);
+
 
     const toggleText = () => {
         // descriptionEl?.current?.classList.add('overlay');
         // descriptionEl?.current?.classList.remove('description');
         descriptionEl?.current?.classList.replace('description', 'overlay');
+        if (btnEl.current)
+            btnEl.current.style.display = 'none';
+
         if (closeEL.current)
             closeEL.current.style.display = 'flex';
     }
@@ -90,7 +95,7 @@ const Crypto = () => {
                 </div>
 
                 <div className="btn-container">
-                    <button onClick={toggleText} className="btn">Voir plus</button>
+                    <button ref={btnEl} onClick={toggleText} className="btn">Voir plus</button>
                 </div>
                 <a href="https://nomics.com" className="link">Crypto Market Cap & Pricing Data Provided By
                     Nomics</a>
