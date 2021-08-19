@@ -19,8 +19,6 @@ const Crypto = () => {
         descriptionEl?.current?.classList.replace('description', 'overlay');
         if (closeEL.current)
             closeEL.current.style.display = 'flex';
-
-
     }
 
     const closeModal = () => {
@@ -70,7 +68,8 @@ const Crypto = () => {
                 <div className="stats">
                     <div className="price">
                         <span
-                        className="font-bold">Price :</span>{Number(result1?.[0].price).toFixed(2)}€</div>
+                            className="font-bold">Price :</span>{Number(result1?.[0].price).toFixed(2)}€
+                    </div>
                     <div className="evolution">
                         <p className="font-bold ">Evolution :</p>
                         <p>1 jour
@@ -86,8 +85,8 @@ const Crypto = () => {
                 </div>
 
                 <div ref={descriptionEl} className="description">
+                    <p ref={closeEL} className="modal-content close " onClick={closeModal}>&times;</p>
                     <p className="modal-content description-content">{result?.[0].description}</p>
-                    <p ref={closeEL} className="modal-content close" onClick={closeModal}>X</p>
                 </div>
 
                 <div className="btn-container">

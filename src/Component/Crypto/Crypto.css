@@ -7,14 +7,14 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-basis:50%;
+    flex-basis: 50%;
 }
 
 .evolution {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex-basis:50%;
+    flex-basis: 50%;
 }
 
 .cryptoName {
@@ -37,12 +37,6 @@
     margin: 1rem 0.5rem;
 }
 
-.close {
-    display: none;
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
 .overlay {
     position: absolute;
     overflow: scroll;
@@ -53,12 +47,22 @@
     bottom: 5rem;
     left: 1rem;
     border-radius: 6px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    /*display: flex;*/
+    /*justify-content: flex-end;*/
+    /*align-items: flex-start;*/
     background-color: ghostwhite; /* Black background with opacity */
     z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+}
+
+.close {
+    position: fixed;
+    top: 15%;
+    left: 90%;
+    display: none;
+    margin-right: 5rem;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 
