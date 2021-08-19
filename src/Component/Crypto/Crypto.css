@@ -24,7 +24,8 @@
 
 .description {
     overflow: hidden;
-    flex-basis: 8rem;
+    text-overflow: ellipsis;
+    flex-basis: 7.7rem;
 }
 
 .modal-content {
@@ -32,7 +33,6 @@
 }
 
 .description-content {
-    margin: 1rem 0.5rem;
 }
 
 .overlay {
@@ -40,9 +40,9 @@
     overflow: scroll;
     font-size: 0.9rem;
     border: 2px solid #b1c1ee;
-    top: 10rem;
+    top: 5rem;
     right: 1rem;
-    bottom: 5rem;
+    bottom: 3rem;
     left: 1rem;
     border-radius: 6px;
     /*display: flex;*/
@@ -55,7 +55,7 @@
 
 .close {
     position: fixed;
-    top: 13%;
+    top: 5%;
     left: 85%;
     display: none;
     margin-right: 5rem;
@@ -65,6 +65,7 @@
 
 
 .btn-container {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;

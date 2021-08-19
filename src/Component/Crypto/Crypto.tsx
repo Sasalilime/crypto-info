@@ -32,6 +32,8 @@ const Crypto = () => {
         descriptionEl?.current?.classList.replace('overlay', 'description');
         if (closeEL.current)
             closeEL.current.style.display = 'none';
+        if (btnEl.current)
+            btnEl.current.style.display = 'block';
     }
 
 
